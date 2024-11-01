@@ -5,7 +5,10 @@ function NewsBoard({category}) {
   const [articles, setArticles] = useState([]);
   
   useEffect(() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    // const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+    // this one is not working ... i do not why
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${import.meta.env.VITE_API_KEY}`;
+    // const url = `https://newsapi.org/v2/top-headlines/sources?category=business&apiKey=ea97fe8b00504bf09c6b90c4e7450879`;
 
     fetch(url)
       .then(response => {
